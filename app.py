@@ -23,7 +23,7 @@ st.divider()
 st.header("Lista de Alunos")
 
 cursos = ["Todos"] + dados.listar_cursos_unicos()
-curso_filtro = st.selectbox("Filtrar por curso", curso)
+curso_filtro = st.selectbox("Filtrar por curso", cursos)
 
 if curso_filtro != "Todos":
     alunos = dados.listar_por_curso(curso_filtro)
