@@ -40,3 +40,6 @@ def listar_por_curso(curso):
     con = conectar_bd()
     cur = con.cursor()
     cur.execute("SELECT * FROM alunos WHERE curso = ?", (curso,))
+    dados = cur.fetchall()
+    con.close()
+    return dados
